@@ -1,14 +1,42 @@
-h1 {
-  text-align: center;
-  color: rgb(11, 77, 11);
-  font-family: 'segoe script', script;
-  padding: 50px;
+body {
+  margin: 5rem 10rem 5rem 10rem;
 }
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.header-text {
+  padding: 0;
+  margin-top: 1rem;
+  color: rgb(11, 77, 11);
+  text-align: center;
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.header-word {
+  margin-left: 15px;
+  font-size: 3.5rem;
+}
+
 .navlinks {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  color: green;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 71, 0);
   margin: 50px;
   background-color: #c3d1cf; 
   overflow: hidden;
@@ -18,24 +46,23 @@ h1 {
  }
 h3 {
   color: rgb(33, 96, 33);
-  font-family: 'Times New Roman', Times, serif;
-  padding: 10px;
-  margin: 10px;
+   font-family: "Baskervville", serif;
 }
 p {
   color:black;
   padding: 10px;
   margin: 10px;
-  font-family: 'arial rounded mt bold', 'Times New Roman', Times, serif;
+   font-family: "Baskervville", serif;
 }
 h4 {
   color: rgb(5, 44, 5);
-  padding: 10px;
-  margin: 10px;
 }
+
 footer {
   text-align: center;
-  font-family: 'Segoe script', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 a {
   color: #2b8730; 
@@ -45,13 +72,13 @@ a {
   font-size: 17px; 
   background-color: #fffcfc;
   list-style-type: none;
-  border-right: 1px solid #080505;
 }
 a:hover {
   color: #063b07; 
   text-decoration: underline; 
   font-size: 17px; 
   background-color: #c3d1cf;
+  border-radius: 50px;
 }
 input {
   width: 300px; 

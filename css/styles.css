@@ -1,7 +1,114 @@
 body {
   margin: 5rem 10rem 5rem 10rem;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  color:#48623a
 }
 
+h1 {
+    color: #5a8b40;
+    text-align: center;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.project {
+    background-color: #D9E9CF;
+    border: 1px solid #96A78D;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(95, 64, 64, 0.1);
+    text-align: center;
+    
+}
+
+.project img {
+    max-width: 500px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.project button {
+    margin: 0px auto;
+    padding: 8px 12px;
+    background-color: #B6CEB4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.details {
+    display: none;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error {
+    color: #314026;
+    font-size: 0.9em;
+}
+
+form button:hover {
+    background-color: #48623a;
+}
+
+#contact-form {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #b9cead;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(72, 223, 138, 0.1);
+    align-items: center;
+}
+#contact-form label {
+    font-weight: bold;
+}
+#contact-form input, #contact-form textarea {
+    padding: 10px;
+    border: 1px solid #4fbd58;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+#contact-form input[type="submit"] {
+    background-color: #5a8b40;
+    color: #b6f0c6;
+    padding: 16px 2px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(72, 223, 138, 0.1);
+    width: 50%;
+}
+#contact-form input[type="submit"]:hover {
+    background-color: #48623a;
+}
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #4fab1e;
+    margin: 60px 0;
+    width: 100%;
+}
 .nav-container {
   display: flex;
   justify-content: center;

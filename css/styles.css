@@ -1,5 +1,5 @@
 body {
-  margin: 5rem 10rem 5rem 10rem;
+  margin: auto;
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   text-align: center;
@@ -45,7 +45,9 @@ h1 {
 .details {
     display: none;
 }
-
+.details-visible {
+    display: block;
+}
 input, textarea {
     width: 100%;
     padding: 8px;
@@ -112,12 +114,23 @@ form button:hover {
 .nav-container {
   display: flex;
   justify-content: center;
+  width: 100%;
+  overflow-x: auto;
 }
 
 .link {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 0 10px;
+  background-color: #fffcfc;
+  border: 2px solid #2b8730;
+  border-radius: 30px;
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  color: rgb(0, 71, 0);
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .header-text {
@@ -143,12 +156,13 @@ form button:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
+  gap: 10px;
+  padding: 10px;
   color: rgb(0, 71, 0);
-  margin: 50px;
+  margin: 10PX;
   background-color: #c3d1cf; 
   overflow: hidden;
-  float: left; 
-  text-decoration: none;
   
  }
 h3 {
@@ -180,12 +194,10 @@ a {
   background-color: #fffcfc;
   list-style-type: none;
 }
-a:hover {
+.link:hover {
   color: #063b07; 
   text-decoration: underline; 
-  font-size: 17px; 
   background-color: #c3d1cf;
-  border-radius: 50px;
 }
 input {
   width: 300px; 
@@ -216,13 +228,33 @@ input:focus {
     font-size: 30px;
     padding: 20px;
   } 
-
-  .navlinks {
-    display: grid;
-    text-align: left;
-  }
   footer {
     font-size: 12px;
     padding: 5px
+  }
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project img {
+    width: 100%;
+    height: auto;
+  }
+  .navlinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10%;
+  }
+  .link {
+    width: 100%;
+    max-width: 300px;
+    margin: 5px auto;
+    text-align: center;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
   }
 }

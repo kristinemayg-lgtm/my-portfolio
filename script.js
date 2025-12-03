@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const form = document.getElementById("contactForm");
+if (form) {
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -46,6 +47,8 @@ form.addEventListener("submit", function(event) {
         form.reset();
     }
   });
+}
+
     const toggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
 
@@ -53,19 +56,19 @@ form.addEventListener("submit", function(event) {
 
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
-        toggleBtn.textContent = 'light mode';
+        toggleBtn.textContent = '☀️';
     } else {
-        toggleBtn.textContent = 'dark mode';
+        toggleBtn.textContent = '🌙';
     }
 
     toggleBtn.addEventListener('click', () => {
         const isDark = body.classList.toggle('dark-mode');
 
         if (isDark) {
-            toggleBtn.textContent = 'light mode';
+            toggleBtn.textContent = '☀️';
             localStorage.setItem('theme', 'dark');
         } else {
-            toggleBtn.textContent = 'dark mode';
+            toggleBtn.textContent = '🌙';
             localStorage.setItem('theme', 'light');
         }
     });

@@ -288,3 +288,22 @@ body.dark-mode footer #theme-toggle {
 #theme-toggle:active {
   transform: rotate(180deg) scale(1.2);
 }
+.back-button {
+  padding: 8px 16px;
+  border-radius:20px;
+  border: none;
+  background-color: #5a8b40;
+  color:#b6f0c6;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.back-button:hover {
+  background-color: #5a8b40;
+  transform: scale(1.05);
+}
+body.dark-mode .back-button {
+  background-color: #48623a;
+  color:rgb(0, 71, 0);
+}

@@ -4,11 +4,15 @@ document.addEventListener("DOMContentLoaded", function() {
     buttons.forEach(button => {
         button.addEventListener("click", function() {
             const details = button.nextElementSibling;
-            if (details.style.display === "none" || details.style.display === "") {
-                details.style.display = "block";
+
+            // toggle a class on the details box
+            const isOpen = details.classList.toggle("is-open");
+
+            if (isOpen) {
+                details.style.display = "block";   // show it
                 button.textContent = "Hide Details";
             } else {
-                details.style.display = "none";
+                details.style.display = "none";    // hide it
                 button.textContent = "Show Details";
             }
         });

@@ -46,13 +46,27 @@ form.addEventListener("submit", function(event) {
         form.reset();
     }
   });
-  const toggleButton = document.getElementById("dark-mode-toggle");
-  toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    if (document.body.classList.contains("dark-mode")) {
-        toggleButton.textContent = "Light Mode";
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        toggleBtn.textContent = 'light mode';
     } else {
-        toggleButton.textContent = "Dark Mode";
+        toggleBtn.textContent = 'dark mode';
     }
+
+    toggleBtn.addEventListener('click', () => {
+        const isDark = body.classList.toggle('dark-mode');
+
+        if (isDark) {
+            toggleBtn.textContent = 'light mode';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            toggleBtn.textContent = 'dark mode';
+            localStorage.setItem('theme', 'light');
+        }
     });
   

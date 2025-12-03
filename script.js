@@ -5,19 +5,13 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             const details = button.nextElementSibling;
 
-            // toggle a class on the details box
             const isOpen = details.classList.toggle("is-open");
 
-            if (isOpen) {
-                details.style.display = "block";   // show it
-                button.textContent = "Hide Details";
-            } else {
-                details.style.display = "none";    // hide it
-                button.textContent = "Show Details";
-            }
+            button.textContent = isOpen ? "Hide Details" : "Show Details";
         });
     });
 });
+
 
 const form = document.getElementById("contactForm");
 if (form) {
